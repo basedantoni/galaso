@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# nuxt.js
+/.nuxt/
 /out/
 
 # production
