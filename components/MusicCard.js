@@ -1,11 +1,12 @@
 import Image from "next/image"
 import { PlayIcon } from "@heroicons/react/20/solid"
+import { motion } from "framer-motion"
 
 const MusicCard = ({ trackType, trackName, listenLink, imageName }) => {
 
   return (
     <>
-      <div className="mx-1 my-2 w-[415px]">
+      <motion.div className="mx-1 my-2 w-[415px]">
         <div>
           <Image
             src={`/${imageName}`}
@@ -30,7 +31,7 @@ const MusicCard = ({ trackType, trackName, listenLink, imageName }) => {
             Listen
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

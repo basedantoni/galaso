@@ -1,11 +1,15 @@
 import Image from "next/image"
 import { PlayIcon } from "@heroicons/react/20/solid"
+import { motion } from "framer-motion"
 
 const MusicHero = () => {
   return (
     <>
       <div className="w-full my-4">
-        <div className="max-w-md mx-auto">
+        <motion.div
+          className="max-w-md mx-auto"
+          whileHover={{ scale: 1.03, duration: 1 }}
+        >
           <Image
             src="/around-the-sun-greeneyes.jpeg"
             alt="cover"
@@ -14,7 +18,7 @@ const MusicHero = () => {
             layout="responsive"
             className="rounded-md"
           />
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center">
           <p className="text-gray-400 mt-2">ALBUM</p>
           <h6 className="mb-2">AROUND THE SUN</h6>

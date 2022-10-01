@@ -6,7 +6,7 @@ export default function Music() {
   return (
     <BaseLayout>
       <MusicHero />
-      <hr class="border-1 border-black my-24" />
+      <hr className="border-1 border-black my-24" />
       <div className="flex flex-wrap justify-center">
         <MusicCard
           trackType="Single"
