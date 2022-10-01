@@ -1,9 +1,9 @@
 import Link from "next/link"
 
-export default function Layout({ children }) {
+export default function BaseLayout({ children }) {
   return (
     <>
-      <main className='h-screen w-full bg-cover sm:bg-contain bg-galaso-background'>
+      <main>
         <Link href="/tour">
           <a className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed">TOUR</a>
         </Link>
