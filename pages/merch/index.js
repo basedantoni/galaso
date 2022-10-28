@@ -1,4 +1,5 @@
 import BaseLayout from '../../components/layouts/baseLayout';
+import { shopifyClient, parseShopifyResponse } from '../../lib/shopify'
 
 export default function Merch() {
   return (
@@ -7,3 +8,15 @@ export default function Merch() {
     </BaseLayout>
   );
 }
+
+export const getServerSideProps = async () => {
+  // Fetch all the products
+  const products = await shopifyClient.product.fetchAll();
+
+
+  return {
+    props: {
+      products: parseShopifyResponse(products),
+    },
+  };
+};
