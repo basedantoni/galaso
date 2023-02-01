@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useMediaQuery } from '../hooks/useMediaQuery'
 import HomeLayout from '../components/layouts/homeLayout'
 
 export default function Home() {
+  const isMedium = useMediaQuery('(min-width: 768px)');
+
   return (
     <HomeLayout>
       <div>
@@ -13,10 +16,10 @@ export default function Home() {
         </Head>
 
         <main>
-          <div className='sm:h-96 sm:w-96 h-40 w-40 mx-auto'>
+          <div className='xl:h-96 xl:w-96 lg:h-80 lg:w-80 md:h-64 md:w-64 h-40 w-40 mx-auto my-auto'>
             <motion.div
               initial={{ y: 500, opacity: 0 }}
-              animate={{ y: 170, opacity: 1 }}
+              animate={isMedium ? { y: 140, opacity: 1 } : { y: 200, opacity: 1 }}
               transition={{
                 delay: 1,
                 y: { duration: 1.7 },
