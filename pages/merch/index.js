@@ -1,9 +1,11 @@
-import BaseLayout from '../../components/layouts/baseLayout';
+import Shirt from '../../components/Shirt';
+import MerchLayout from '../../components/layouts/merchLayout';
+import { motion } from 'framer-motion';
 
 export default function Merch() {
   return (
-    <BaseLayout>
-      <h1 className="text-5xl text-center mt-16">COMING SOON</h1>
-    </BaseLayout>
+    <MerchLayout>
+      <Shirt />
+    </MerchLayout>
   );
 }

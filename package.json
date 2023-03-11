@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.10",
+    "@react-three/drei": "^9.57.2",
+    "@react-three/fiber": "^8.12.0",
     "framer-motion": "^7.3.6",
+    "maath": "^0.5.2",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -20,6 +23,7 @@
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",
+    "next-transpile-modules": "^10.0.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }

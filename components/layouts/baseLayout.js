@@ -19,6 +19,7 @@ export default function BaseLayout({ children }) {
               }}
             >
               <Image
+                priority
                 src="/falling.png"
                 alt="sun"
                 width={500}
