@@ -27,19 +27,33 @@ function App() {
     const ttfLoader = new TTFLoader();
     ttfLoader.load('fonts/Porcine-Bosk.ttf', (json) => {
       // First parse the font.
-      const jetBrainsFont = fontLoader.parse(json);
+      const boskFont = fontLoader.parse(json);
+
       // Use parsed font as normal.
-      const textGeometry = new TextGeometry('CLICK ME', {
-        height: isMedium ? 5 : 2.5,
-        size: isMedium ? 12 : 4,
-        font: jetBrainsFont,
+      // const textGeometry = new TextGeometry('BUY NOW', {
+      //   height: isMedium ? 3.5 : 2.5,
+      //   size: isMedium ? 12.5 : 4,
+      //   font: boskFont,
+      // });
+      // const textMaterial = new THREE.MeshNormalMaterial();
+      // const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      // textMesh.position.x = isMedium ? -29 : -9.75;
+      // textMesh.position.y = -1;
+      // textMesh.position.z = isMedium ? -12 : -8;
+      // test.scene.add(textMesh);
+
+      // COMING SOON TEXT
+      const comingSoonTextGeo = new TextGeometry('COMING SOON', {
+        height: isMedium ? 3.5 : 2.5,
+        size: isMedium ? 9 : 2.5,
+        font: boskFont,
       });
-      const textMaterial = new THREE.MeshNormalMaterial();
-      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-      textMesh.position.x = isMedium ? -29.5 : -9.75;
-      textMesh.position.y = -1;
-      textMesh.position.z = isMedium ? -10 : -8;
-      test.scene.add(textMesh);
+      const comingSoonTextMaterial = new THREE.MeshNormalMaterial();
+      const comingSoonTextMesh = new THREE.Mesh(comingSoonTextGeo, comingSoonTextMaterial);
+      comingSoonTextMesh.position.x = isMedium ? -32 : -9;
+      comingSoonTextMesh.position.y = -1;
+      comingSoonTextMesh.position.z = isMedium ? -12 : -8;
+      test.scene.add(comingSoonTextMesh);
     });
 
     let loadedModel;
@@ -47,8 +61,9 @@ function App() {
     glftLoader.load('scene.gltf', (gltfScene) => {
       loadedModel = gltfScene;
 
-      // gltfScene.scene.rotation.y = Math.PI / 5;
+      gltfScene.scene.rotation.y = Math.PI / 5;
       gltfScene.scene.position.y = 3;
+      gltfScene.scene.position.x = isMedium ? -1 : 0;
       gltfScene.scene.scale.set(0.01, 0.01, 0.01);
       test.scene.add(gltfScene.scene);
     });
@@ -63,11 +78,12 @@ function App() {
     };
     animate();
 
-    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+    //SHOPIFY CLICK UNCOMMENT FOR LAUNCH
+    // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
     function onDocumentMouseDown( event ) 
     {
-        console.log("Click.");
+        // Add redirect to shopify store
         const canvasDomElement = document.getElementById('myThreeJsCanvas');
 
         if (canvasDomElement) {
