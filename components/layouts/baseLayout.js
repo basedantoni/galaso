@@ -1,8 +1,24 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useEffect } from 'react';
 
 export default function BaseLayout({ children }) {
+
+  function onDocumentMouseDown() {
+    // Add redirect to shopify store
+    const canvasDomElement = document.getElementById('myThreeJsCanvas');
+
+    if (canvasDomElement) {
+      document.body.removeChild(canvasDomElement);
+    }
+  }
+
+  useEffect(() => {
+    onDocumentMouseDown();
+  }, [])
+  
+
   return (
     <>
       <main>

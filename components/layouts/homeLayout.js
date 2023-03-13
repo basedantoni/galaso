@@ -1,6 +1,20 @@
 import Link from "next/link"
+import { useEffect } from 'react';
 
 export default function HomeLayout({ children }) {
+  function onDocumentMouseDown() {
+    // Add redirect to shopify store
+    const canvasDomElement = document.getElementById('myThreeJsCanvas');
+
+    if (canvasDomElement) {
+      document.body.removeChild(canvasDomElement);
+    }
+  }
+
+  useEffect(() => {
+    onDocumentMouseDown();
+  }, [])
+
   return (
     <>
       <main className='h-screen w-full bg-cover sm:bg-contain bg-galaso-background'>

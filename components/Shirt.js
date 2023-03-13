@@ -84,11 +84,6 @@ function App() {
     function onDocumentMouseDown( event ) 
     {
         // Add redirect to shopify store
-        const canvasDomElement = document.getElementById('myThreeJsCanvas');
-
-        if (canvasDomElement) {
-          document.body.removeChild(canvasDomElement);
-        }
     }
   }, [isMedium]);
 
