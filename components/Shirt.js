@@ -58,13 +58,13 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load('scene.gltf', (gltfScene) => {
+    glftLoader.load('please.gltf', (gltfScene) => {
       loadedModel = gltfScene;
 
       gltfScene.scene.rotation.y = Math.PI / 5;
-      gltfScene.scene.position.y = 3;
-      gltfScene.scene.position.x = isMedium ? -1 : 0;
-      gltfScene.scene.scale.set(0.01, 0.01, 0.01);
+      gltfScene.scene.position.y = isMedium ? -15 : -10;
+      gltfScene.scene.position.x = isMedium ? -1 : 0.5;
+      isMedium ? gltfScene.scene.scale.set(2, 2, 2) : gltfScene.scene.scale.set(1.4, 1.4, 1.4);
       test.scene.add(gltfScene.scene);
     });
 
