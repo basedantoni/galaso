@@ -108,18 +108,36 @@ function App() {
       // test.scene.add(textMesh);
 
       // COMING SOON TEXT
-      const comingSoonTextGeo = new TextGeometry(
+      const text = isMedium ? `STARGAZING TEE 
+             
+
+      
+
+
+
+    IN THE DARK` : 
       `STARGAZING TEE 
              
-    IN THE DARK`, {
+
+
+
+
+
+      
+
+
+
+      
+    IN THE DARK`
+      const comingSoonTextGeo = new TextGeometry(text, {
         height: isMedium ? 3.5 : 2.5,
-        size: isMedium ? 7.5 : 2,
+        size: isMedium ? 4.5 : 2,
         font: boskFont,
       });
       const comingSoonTextMaterial = new THREE.MeshNormalMaterial();
       const comingSoonTextMesh = new THREE.Mesh(comingSoonTextGeo, comingSoonTextMaterial);
-      comingSoonTextMesh.position.x = isMedium ? -34 : -9;
-      comingSoonTextMesh.position.y = 3;
+      comingSoonTextMesh.position.x = isMedium ? -21 : -9;
+      comingSoonTextMesh.position.y = 14;
       comingSoonTextMesh.position.z = isMedium ? -12 : -8;
       test.scene.add(comingSoonTextMesh);
     });
