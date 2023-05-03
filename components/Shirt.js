@@ -163,6 +163,14 @@ function App() {
       test.loadedModel = gltfScene;
       loadedModel = gltfScene;
 
+      gltfScene.scene.children[0].traverse(n => {
+        if (n.isMesh) {
+          n.castShadow = true;
+          n.receiveShadow = true;
+          if(n.material.map) n.material.map.anisotropy = 16;
+        }
+      })
+
       gltfScene.scene.traverse((child) => {
         if (child instanceof THREE.Mesh) {
           modelMeshes.push(child);
