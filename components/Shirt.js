@@ -57,8 +57,6 @@ function App() {
     }   
 
     function onClick(event) {
-      event.preventDefault();
-    
       // Calculate normalized device coordinates (NDC) of mouse click
       const mouse = new THREE.Vector2(
         (event.clientX / window.innerWidth) * 2 - 1,
@@ -79,8 +77,23 @@ function App() {
       }
     }
 
+    function onTouchStart(event) {
+      console.log('touch')
+      if (event.touches.length === 1) {
+        onClick(event.touches[0]);
+      }
+    }
+    
+    function onTouchEnd(event) {
+      if (event.changedTouches.length === 1) {
+        onClick(event.changedTouches[0]);
+      }
+    }    
+
     window.addEventListener('mousemove', onMouseMove, false);
     window.addEventListener('click', onClick, false);
+    window.addEventListener('touchstart', onTouchStart, false);
+    window.addEventListener('touchend', onTouchEnd, false);
 
     const boxGeometry = new THREE.BoxGeometry(8, 8, 8);
     const boxMaterial = new THREE.MeshNormalMaterial();
@@ -90,7 +103,7 @@ function App() {
     // Font
     const fontLoader = new FontLoader();
     const ttfLoader = new TTFLoader();
-    ttfLoader.load('fonts/Porcine-Bosk.ttf', (json) => {
+    ttfLoader.load('fonts/waukegan.ttf', (json) => {
       // First parse the font.
       const boskFont = fontLoader.parse(json);
 
@@ -123,20 +136,21 @@ function App() {
 
 
 
-      
+
 
 
 
       
     IN THE DARK`
       const comingSoonTextGeo = new TextGeometry(text, {
-        height: isMedium ? 3.5 : 2.5,
-        size: isMedium ? 4.5 : 2,
+        height: isMedium ? 1.5 : 1.5,
+        size: isMedium ? 4.5 : 1.75,
         font: boskFont,
       });
-      const comingSoonTextMaterial = new THREE.MeshNormalMaterial();
+      const comingSoonTextColor = 0xba171a;
+      const comingSoonTextMaterial = new THREE.MeshStandardMaterial({ color: comingSoonTextColor });
       const comingSoonTextMesh = new THREE.Mesh(comingSoonTextGeo, comingSoonTextMaterial);
-      comingSoonTextMesh.position.x = isMedium ? -21 : -9;
+      comingSoonTextMesh.position.x = isMedium ? -24 : -9;
       comingSoonTextMesh.position.y = 14;
       comingSoonTextMesh.position.z = isMedium ? -12 : -8;
       test.scene.add(comingSoonTextMesh);
@@ -144,7 +158,7 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load('please.gltf', (gltfScene) => {
+    glftLoader.load('tee.gltf', (gltfScene) => {
       // After loading the GLTF model, assign it to the test instance
       test.loadedModel = gltfScene;
       loadedModel = gltfScene;
@@ -165,9 +179,9 @@ function App() {
       boundingBox.position.x = isMedium ? -1 : 0.5;
 
       gltfScene.scene.rotation.y = Math.PI / 5;
-      gltfScene.scene.position.y = isMedium ? -15 : -10;
-      gltfScene.scene.position.x = isMedium ? -1 : 0.5;
-      isMedium ? gltfScene.scene.scale.set(2, 2, 2) : gltfScene.scene.scale.set(1.4, 1.4, 1.4);
+      gltfScene.scene.position.y = isMedium ? -1 : 2;
+      gltfScene.scene.position.x = isMedium ? -1 : 0.3;
+      isMedium ? gltfScene.scene.scale.set(2.75, 2.75, 2.75) : gltfScene.scene.scale.set(0.2, 0.2, 0.2);
       test.scene.add(gltfScene.scene);
     });
 
@@ -176,6 +190,8 @@ function App() {
     return () => {
       window.removeEventListener('mousemove', onMouseMove, false);
       window.removeEventListener('click', onClick, false);
+      window.removeEventListener('touchstart', onTouchStart, false);
+      window.removeEventListener('touchend', onTouchEnd, false);
     };
   }, [isMedium]);
 
