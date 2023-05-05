@@ -12,13 +12,12 @@ import SceneInit from '../lib/sceneInit';
 function App() {
   const isMedium = useMediaQuery('(min-width: 768px)');
 
-  
   useEffect(() => {
     const modelMeshes = [];
     let boundingBox;
     const test = new SceneInit('myThreeJsCanvas');
-    test.initialize();
-    test.animate();
+    test.initialize(isMedium);
+    test.animate(isMedium);
 
     // Update the onMouseMove function
     function onMouseMove(event) {
@@ -128,6 +127,10 @@ function App() {
 
 
 
+
+
+
+
     IN THE DARK` : 
       `STARGAZING TEE 
              
@@ -140,25 +143,28 @@ function App() {
 
 
 
+
+
+
       
     IN THE DARK`
       const comingSoonTextGeo = new TextGeometry(text, {
-        height: isMedium ? 1.5 : 1.5,
-        size: isMedium ? 4.5 : 1.75,
+        height: isMedium ? 1.0 : 1.5,
+        size: isMedium ? 3.0 : 1.75,
         font: boskFont,
       });
-      const comingSoonTextColor = 0xba171a;
+      const comingSoonTextColor = 0xBD0A11;
       const comingSoonTextMaterial = new THREE.MeshStandardMaterial({ color: comingSoonTextColor });
       const comingSoonTextMesh = new THREE.Mesh(comingSoonTextGeo, comingSoonTextMaterial);
-      comingSoonTextMesh.position.x = isMedium ? -24 : -9;
-      comingSoonTextMesh.position.y = 14;
+      comingSoonTextMesh.position.x = isMedium ? -16.65 : -9;
+      comingSoonTextMesh.position.y = isMedium ? 15 : 13;
       comingSoonTextMesh.position.z = isMedium ? -12 : -8;
       test.scene.add(comingSoonTextMesh);
     });
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load('tee.gltf', (gltfScene) => {
+    glftLoader.load('tee-v2.gltf', (gltfScene) => {
       // After loading the GLTF model, assign it to the test instance
       test.loadedModel = gltfScene;
       loadedModel = gltfScene;
@@ -187,9 +193,9 @@ function App() {
       boundingBox.position.x = isMedium ? -1 : 0.5;
 
       gltfScene.scene.rotation.y = Math.PI / 5;
-      gltfScene.scene.position.y = isMedium ? -1 : 2;
+      gltfScene.scene.position.y = isMedium ? -1 : 0;
       gltfScene.scene.position.x = isMedium ? -1 : 0.3;
-      isMedium ? gltfScene.scene.scale.set(2.75, 2.75, 2.75) : gltfScene.scene.scale.set(0.2, 0.2, 0.2);
+      isMedium ? gltfScene.scene.scale.set(2.75, 2.75, 2.75) : gltfScene.scene.scale.set(2.3, 2.3, 2.3);
       test.scene.add(gltfScene.scene);
     });
 
