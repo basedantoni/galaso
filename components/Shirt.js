@@ -164,7 +164,7 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load('tee-v2.gltf', (gltfScene) => {
+    glftLoader.load('tee-v3.gltf', (gltfScene) => {
       // After loading the GLTF model, assign it to the test instance
       test.loadedModel = gltfScene;
       loadedModel = gltfScene;
