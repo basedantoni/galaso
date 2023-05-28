@@ -1,13 +1,18 @@
 import BaseLayout from "../../components/layouts/baseLayout";
 import MusicCard from "../../components/MusicCard";
 import MusicHero from "../../components/MusicHero";
+import { getMusic } from '../../lib/api.js';
 import { useState } from "react";
 
+export async function getServerSideProps() {
+  const musics = await getMusic();
+  return { props: { musics } };
+}
 
-export default function Music() {
+export default function Music({ musics: { data: musics }}) {
   const [albumns, setAlbumns] = useState([
     { trackType: 'Single', trackName: "IN THE DARK", listenLink: "https://lnk.to/eSVYClNn", imageName: "in-the-dark.webp", id: 1 },
-    { trackType: 'Single', trackName: "IN THE DARK - SPED UP", listenLink: "https://lnk.to/yF8y3ESz", imageName: "in-the-dark-sped.webp", id: 1 },
+    { trackType: 'Single', trackName: "IN THE DARK - SPED UP", listenLink: "https://lnk.to/yF8y3ESz", imageName: "in-the-dark-sped.webp", id: 7 },
     { trackType: 'Single', trackName: "ALIVE", listenLink: "https://lnk.to/USbl3erH", imageName: "alive.webp", id: 2 },
     { trackType: 'Single', trackName: "SINKING", listenLink: "https://lnk.to/i3akMP5Z", imageName: "sinking.webp", id: 3 },
     { trackType: 'Single', trackName: "ALL ROUND", listenLink: "https://lnk.to/yOAPmJFf", imageName: "all-around.webp", id: 4 },
@@ -20,13 +25,15 @@ export default function Music() {
       <MusicHero />
       <hr className="border-1 border-white mb-4 lg:my-24 invisible lg:visible" />
       <div className="flex flex-wrap justify-center lg:justify-between">
-        {albumns.map(({ trackType, trackName, listenLink, imageName, id }) => (
+        {musics.map(({ attributes: { 'track_type': trackType, name, link, 'cover_art': { data: { attributes: { url, alternativeText, formats: { small }}}}}, id }) => (
           <MusicCard
             key={id}
             trackType={trackType}
-            trackName={trackName}
-            listenLink={listenLink}
-            imageName={imageName}
+            trackName={name}
+            listenLink={link}
+            smallUrl={small.url}
+            alternativeText={alternativeText}
+            url={url}
           />
         ))}
       </div>

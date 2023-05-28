@@ -17,6 +17,7 @@ const MusicHero = () => {
             height={415}
             layout="responsive"
             className="rounded-md"
+            priority
           />
         </motion.div>
         <div className="flex flex-col items-center">

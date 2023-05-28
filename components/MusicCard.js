@@ -1,16 +1,18 @@
 import Image from "next/image"
 import { PlayIcon } from "@heroicons/react/20/solid"
 import { motion } from "framer-motion"
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
-const MusicCard = ({ trackType, trackName, listenLink, imageName }) => {
+const MusicCard = ({ trackType, trackName, listenLink, smallUrl, alternativeText, url }) => {
+  const isMedium = useMediaQuery('(min-width: 768px)');
 
   return (
     <>
       <motion.div className="mx-1 my-2 w-[415px]">
         <div>
           <Image
-            src={`/${imageName}`}
-            alt="cover"
+            src={isMedium ? url : smallUrl}
+            alt={alternativeText}
             width={500}
             height={500}
             layout="responsive"
