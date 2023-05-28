@@ -14,7 +14,7 @@ export default function Home() {
     <HomeLayout>
       <div>
         <Head>
-          <title>Galaso</title>
+          <title>GALASO</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>   
 
