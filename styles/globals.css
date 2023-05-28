@@ -6,4 +6,21 @@
   body {
     font-family: 'Roboto Mono', monospace;
   }
+
+  /* Waukegan Font */
+  @font-face {
+    font-family: Waukegan;
+    font-weight: 400;
+    src: url(/fonts/waukegan.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Waukegan;
+    font-weight: 500;
+    src: url(/fonts/waukegan-bold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Waukegan;
+    font-weight: 600;
+    src: url(/fonts/waukegan-black.ttf) format("ttf");
+  }
 }

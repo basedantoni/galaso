@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         black: '#121212',
       },
+      fontFamily: {
+        waukegan: ['Waukegan', 'sans-serif'],
+      },
     },
   },
   plugins: [],
