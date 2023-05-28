@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function Music() {
   const [albumns, setAlbumns] = useState([
     { trackType: 'Single', trackName: "IN THE DARK", listenLink: "https://lnk.to/eSVYClNn", imageName: "in-the-dark.webp", id: 1 },
+    { trackType: 'Single', trackName: "IN THE DARK - SPED UP", listenLink: "https://lnk.to/yF8y3ESz", imageName: "in-the-dark-sped.webp", id: 1 },
     { trackType: 'Single', trackName: "ALIVE", listenLink: "https://lnk.to/USbl3erH", imageName: "alive.webp", id: 2 },
     { trackType: 'Single', trackName: "SINKING", listenLink: "https://lnk.to/i3akMP5Z", imageName: "sinking.webp", id: 3 },
     { trackType: 'Single', trackName: "ALL ROUND", listenLink: "https://lnk.to/yOAPmJFf", imageName: "all-around.webp", id: 4 },
