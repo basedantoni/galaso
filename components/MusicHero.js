@@ -11,7 +11,7 @@ const MusicHero = () => {
           whileHover={{ scale: 1.03, duration: 1 }}
         >
           <Image
-            src="/around-the-sun-greeneyes.jpeg"
+            src="/around-the-sun-greeneyes.webp"
             alt="cover"
             width={415}
             height={415}

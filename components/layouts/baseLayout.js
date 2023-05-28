@@ -36,7 +36,7 @@ export default function BaseLayout({ children }) {
             >
               <Image
                 priority
-                src="/falling.png"
+                src="/falling.webp"
                 alt="sun"
                 width={500}
                 height={500}
@@ -56,7 +56,7 @@ export default function BaseLayout({ children }) {
         <Link href="/merch">
           <a className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-bold">MERCH</a>
         </Link>
-        <div className="px-24 sm:px-32 py-16 sm:py-24">
+        <div className="px-20 sm:px-32 py-16 sm:py-24">
           {children}
         </div>
       </main>
