@@ -21,7 +21,7 @@ const MusicCard = ({ trackType, trackName, listenLink, smallUrl, alternativeText
         </div>
         <div className="flex flex-col items-center">
           <p className="text-gray-400 mt-2">{trackType}</p>
-          <h6 className="mb-2">{trackName}</h6>
+          <h6 className="mb-2 uppercase">{trackName}</h6>
           <a
             type="button"
             className="inline-flex mx-auto items-center rounded-md border border-transparent bg-black px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
