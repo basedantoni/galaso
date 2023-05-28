@@ -1,31 +1,39 @@
 import BaseLayout from "../../components/layouts/baseLayout";
 import MusicCard from "../../components/MusicCard";
 import MusicHero from "../../components/MusicHero";
-import { useState } from "react";
+import { getMusic, getSpotlight } from '../../lib/api.js';
 
+export async function getServerSideProps() {
+  const musics = await getMusic();
+  const spotlight = await getSpotlight();
+  return { props: { musics, spotlight } };
+}
 
-export default function Music() {
-  const [albumns, setAlbumns] = useState([
-    { trackType: 'Single', trackName: "IN THE DARK", listenLink: "https://lnk.to/eSVYClNn", imageName: "in-the-dark.webp", id: 1 },
-    { trackType: 'Single', trackName: "ALIVE", listenLink: "https://lnk.to/USbl3erH", imageName: "alive.webp", id: 2 },
-    { trackType: 'Single', trackName: "SINKING", listenLink: "https://lnk.to/i3akMP5Z", imageName: "sinking.webp", id: 3 },
-    { trackType: 'Single', trackName: "ALL ROUND", listenLink: "https://lnk.to/yOAPmJFf", imageName: "all-around.webp", id: 4 },
-    { trackType: 'Single', trackName: "DRIFT", listenLink: "https://lnk.to/kKSxZAPY", imageName: "drift.webp", id: 5 },
-    { trackType: 'Single', trackName: "AROUND THE SUN", listenLink: "https://lnk.to/wOqlGZtb", imageName: "around-the-sun-single.webp", id: 6 },
-  ]);
-
+export default function Music({ musics: { data: musics }, spotlight: { data: spotlight } }) {
   return (
     <BaseLayout>
-      <MusicHero />
+      {spotlight.map(({ attributes: { 'track_type': trackType, name, link, 'cover_art': { data: { attributes: { url, alternativeText, formats: { small }}}}}, id }) => (
+        <MusicHero
+          key={id}
+          trackType={trackType}
+          trackName={name}
+          listenLink={link}
+          smallUrl={small.url}
+          alternativeText={alternativeText}
+          url={url}
+        />
+      ))}
       <hr className="border-1 border-white mb-4 lg:my-24 invisible lg:visible" />
       <div className="flex flex-wrap justify-center lg:justify-between">
-        {albumns.map(({ trackType, trackName, listenLink, imageName, id }) => (
+        {musics.map(({ attributes: { 'track_type': trackType, name, link, 'cover_art': { data: { attributes: { url, alternativeText, formats: { small }}}}}, id }) => (
           <MusicCard
             key={id}
             trackType={trackType}
-            trackName={trackName}
-            listenLink={listenLink}
-            imageName={imageName}
+            trackName={name}
+            listenLink={link}
+            smallUrl={small.url}
+            alternativeText={alternativeText}
+            url={url}
           />
         ))}
       </div>
