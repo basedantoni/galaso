@@ -13,7 +13,7 @@ export default function Home() {
         <Head>
           <title>Galaso</title>
           <link rel="icon" href="/favicon.ico" />
-        </Head>
+        </Head>   
 
         <main>
           <div className='xl:h-96 xl:w-96 lg:h-80 lg:w-80 md:h-64 md:w-64 h-40 w-40 mx-auto my-auto'>
@@ -28,7 +28,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/sun.png"
+                src="/sun.webp"
                 alt="sun"
                 width={500}
                 height={500}

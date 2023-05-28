@@ -13,8 +13,8 @@ export default function Tour({ shows: { data: shows }}) {
       <div className="text-center">
         {shows.map(({ attributes: { address, url, venue_name, date }, id }) => (
           <div className="my-4 sm:my-6" key={id}>
+            <p className="my-1 text-2xl font-semibold">{venue_name}</p>
             <p className="my-1">{formatDate(date)}</p>
-            <p className="my-1 font-semibold">{venue_name}</p>
             <p className="my-1">{address}</p>
             <button
               disabled={url === null}
