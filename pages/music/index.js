@@ -17,8 +17,8 @@ export default function Music() {
   return (
     <BaseLayout>
       <MusicHero />
-      <hr className="border-1 border-black my-24" />
-      <div className="flex flex-wrap justify-center">
+      <hr className="border-1 border-white mb-4 lg:my-24 invisible lg:visible" />
+      <div className="flex flex-wrap justify-center lg:justify-between">
         {albumns.map(({ trackType, trackName, listenLink, imageName, id }) => (
           <MusicCard
             key={id}
