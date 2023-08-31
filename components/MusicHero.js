@@ -3,9 +3,7 @@ import { PlayIcon } from "@heroicons/react/20/solid"
 import { motion } from "framer-motion"
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
-const MusicHero = ({ trackType, trackName, listenLink, smallUrl, alternativeText, url }) => {
-  const isMedium = useMediaQuery('(min-width: 768px)');
-  
+const MusicHero = ({ trackType, trackName, listenLink, alternativeText, url }) => {
   return (
     <>
       <div className="w-full my-4">
@@ -14,7 +12,7 @@ const MusicHero = ({ trackType, trackName, listenLink, smallUrl, alternativeText
           whileHover={{ scale: 1.03, duration: 1 }}
         >
           <Image
-            src={isMedium ? url : smallUrl}
+            src={url}
             alt={alternativeText}
             width={415}
             height={415}

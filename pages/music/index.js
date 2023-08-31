@@ -1,38 +1,86 @@
+const query = `
+{
+  musicCollection {
+    items {
+      sys {
+        id
+      }
+      coverArt {
+        title
+        description
+        contentType
+        fileName
+        size
+        url
+        width
+        height
+      }
+      title
+      link
+      trackType
+    }
+  }
+}
+`
+
+const spotlightQuery = `
+{
+  spotlightReleaseCollection {
+    items {
+      sys {
+        id
+      }
+      coverArt {
+        title
+        description
+        contentType
+        fileName
+        size
+        url
+        width
+        height
+      }
+      title
+      link
+      trackType
+    }
+  }
+}
+`
+
 import BaseLayout from "../../components/layouts/baseLayout";
 import MusicCard from "../../components/MusicCard";
 import MusicHero from "../../components/MusicHero";
 import { getMusic, getSpotlight } from '../../lib/api.js';
 
 export async function getServerSideProps() {
-  const musics = await getMusic();
-  const spotlight = await getSpotlight();
-  return { props: { musics, spotlight } };
+  const musicCollection = await getMusic({ query: query });
+  const spotlightReleaseCollection = await getSpotlight({ query: spotlightQuery });
+  return { props: { musicCollection, spotlightReleaseCollection } };
 }
 
-export default function Music({ musics: { data: musics }, spotlight: { data: spotlight } }) {
+export default function Music({ musicCollection: { data: { musicCollection: { items: musics }}}, spotlightReleaseCollection: { data: { spotlightReleaseCollection: { items: spotlight }}} }) {
   return (
     <BaseLayout>
-      {spotlight.map(({ attributes: { 'track_type': trackType, name, link, 'cover_art': { data: { attributes: { url, alternativeText, formats: { small }}}}}, id }) => (
+      {spotlight.map(({ trackType, title, link, coverArt: { url, title: artTitle }} ) => (
         <MusicHero
-          key={id}
+          key={title}
           trackType={trackType}
-          trackName={name}
+          trackTitle={title}
           listenLink={link}
-          smallUrl={small.url}
-          alternativeText={alternativeText}
+          alternativeText={artTitle}
           url={url}
         />
       ))}
       <hr className="border-1 border-white mb-4 lg:my-24 invisible lg:visible" />
       <div className="flex flex-wrap justify-center lg:justify-between">
-        {musics.map(({ attributes: { 'track_type': trackType, name, link, 'cover_art': { data: { attributes: { url, alternativeText, formats: { small }}}}}, id }) => (
+        {musics.map(({ trackType, title, link, coverArt: { url, title: artTitle }} ) => (
           <MusicCard
-            key={id}
+            key={title}
             trackType={trackType}
-            trackName={name}
+            trackName={title}
             listenLink={link}
-            smallUrl={small.url}
-            alternativeText={alternativeText}
+            alternativeText={artTitle}
             url={url}
           />
         ))}

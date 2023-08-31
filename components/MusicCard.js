@@ -3,15 +3,13 @@ import { PlayIcon } from "@heroicons/react/20/solid"
 import { motion } from "framer-motion"
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
-const MusicCard = ({ trackType, trackName, listenLink, smallUrl, alternativeText, url }) => {
-  const isMedium = useMediaQuery('(min-width: 768px)');
-
+const MusicCard = ({ trackType, trackName, listenLink, alternativeText, url }) => {
   return (
     <>
       <motion.div className="mx-1 my-2 w-[415px]">
         <div>
           <Image
-            src={isMedium ? url : smallUrl}
+            src={url}
             alt={alternativeText}
             width={500}
             height={500}
