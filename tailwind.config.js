@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'galaso-background': "url('../public/galaso-background.webp')"
+        'galaso-background': "url('../public/galaso-background.webp')",
+        'black-background': "url('../public/black.webp')",
+        'rainbow-background': "url('../public/rainbow.webp')",
       },
       colors: {
         black: '#121212',

@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.57.2",
     "@react-three/fiber": "^8.12.0",
     "axios": "^1.4.0",
+    "babel-plugin-glsl": "^1.0.0",
     "framer-motion": "^7.3.6",
     "maath": "^0.5.2",
     "next": "12.3.0",
@@ -21,6 +22,7 @@
     "three": "^0.144.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.11",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",

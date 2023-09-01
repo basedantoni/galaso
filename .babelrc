@@ -1,0 +1,9 @@
+// .babelrc
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    "babel-plugin-macros"
+  ]
+}
