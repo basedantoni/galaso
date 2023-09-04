@@ -20,12 +20,12 @@ export default function Home() {
         </Head>   
 
         <main className='flex justify-center items-center h-full'>
-          <div className='w-96'>
+          <div className='w-64'>
             <Image
               src='/eclipse.png'
               alt='eclipse'
-              width={415}
-              height={415}
+              width={320}
+              height={540}
               layout="responsive"
               priority
             />

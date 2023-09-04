@@ -94,7 +94,7 @@ const Wave = () => {
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
 
   const [image] = useLoader(THREE.TextureLoader, [
-    "galaso-single.webp"
+    "eclipse.png"
   ]);
 
   return (
