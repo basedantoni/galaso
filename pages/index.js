@@ -20,7 +20,7 @@ export default function Home() {
         </Head>   
 
         <main className='flex text-center justify-center items-center h-full'>
-          <div className='w-64 relative'>
+          <div className='w-80 relative'>
             <Image
               src='/eclipse.png'
               alt='eclipse'
@@ -29,8 +29,8 @@ export default function Home() {
               layout="responsive"
               priority
             />
-            <div className="absolute w-full left-[3px] top-[44.5%] sm:top-[46%]">
-              <h1 className="text-2xl sm:text-3xl tracking-[0.2em] font-waukegan">GALASO</h1>
+            <div className="absolute w-full left-[4px] sm:left-[8px] top-[45.5%] sm:top-[46.5%]">
+              <h1 className="text-xl sm:text-3xl font-medium tracking-[0.4em] font-mango">GALASO</h1>
             </div>
           </div>
         </main>

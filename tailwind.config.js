@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      waukegan: ['Waukegan', 'sans-serif'],
+      mango: ['Black Mango', 'serif'],
+    },
+
     extend: {
       backgroundImage: {
         'galaso-background': "url('../public/galaso-background.webp')",
@@ -13,9 +18,6 @@ module.exports = {
       },
       colors: {
         black: '#121212',
-      },
-      fontFamily: {
-        waukegan: ['Waukegan', 'sans-serif'],
       },
     },
   },
