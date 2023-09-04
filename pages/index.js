@@ -19,7 +19,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>   
 
-        <main className='flex justify-center items-center h-full'>
+        <main className='flex text-center justify-center items-center h-full'>
           <div className='w-64'>
             <Image
               src='/eclipse.png'
@@ -29,6 +29,7 @@ export default function Home() {
               layout="responsive"
               priority
             />
+            <h1 className="text-4xl font-bold tracking-wide font-waukegan">GALASO</h1>
           </div>
         </main>
       </div>
