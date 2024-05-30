@@ -20,7 +20,7 @@ export default function BlackLayout({ children }) {
 
   return (
     <>
-      <main className={`h-screen w-full bg-[#000]`}>
+      <main className={`h-screen w-full`}>
         <Link href="/tour">
           <a className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-bold">TOUR</a>
         </Link>

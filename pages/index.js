@@ -1,41 +1,25 @@
 import Head from 'next/head'
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { useMediaQuery } from '../hooks/useMediaQuery'
 import HomeLayout from '../components/layouts/homeLayout'
-import BlackLayout from '../components/layouts/blackLayout'
 
 export default function Home() {
-  const isExtraLarge = useMediaQuery('(min-width: 1440px)');
-  const isLarge = useMediaQuery('(min-width: 1024px)');
-  const isMedium = useMediaQuery('(min-width: 768px)');
-  const isSmall = useMediaQuery('(min-width: 640px)');
-
   return (
-    <BlackLayout>
+    <HomeLayout>
       <div className='w-full h-full'>
         <Head>
           <title>GALASO</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>   
 
-        <main className='flex text-center justify-center items-center h-full'>
-          <div className='w-80 relative'>
-            <Image
-              src='/eclipse.png'
-              alt='eclipse'
-              width={320}
-              height={540}
-              layout="responsive"
-              priority
-            />
-            <div className="absolute w-full left-[4px] sm:left-[8px] top-[45.5%] sm:top-[46.5%]">
-              <h1 className="text-xl sm:text-3xl font-medium tracking-[0.4em] font-mango">GALASO</h1>
-            </div>
-          </div>
+        <main className='relative flex justify-center items-center h-screen'>
+          <h1 className='absolute mix-blend-hard-light top-1/4 right-16 sm:left-[20%] flex flex-col items-end sm:items-start font-waukegan font-bold text-2xl sm:text-5xl'>
+            <span className='sm:mr-24 sm:leading-[80%]'>click to</span>
+            <span className='sm:text-[8rem] sm:leading-[80%]'>listen to</span>
+            <span className='text-4xl sm:text-[8.75rem] sm:leading-[80%]'>single</span>
+            <span className='text-4xl sm:text-[8.75rem] sm:leading-[80%]'>title</span>
+          </h1>
         </main>
       </div>
-    </BlackLayout>
+    </HomeLayout>
   )
 }
 

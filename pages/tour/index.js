@@ -28,9 +28,9 @@ export default function Tour({ showsCollection: { data: { showsCollection: { ite
   return (
     <BaseLayout>
       <div className='flex items-center mb-12 lg:mb-20'>
-        <hr className='border-1 w-full border-white mr-6' />
-        <p className='lg:text-6xl text-xl text-center font-waukegan tracking-widest'>SHOWS</p>
-        <hr className='border-1 w-full border-white ml-6' />
+        <hr className='border-1 w-full border-black mr-6' />
+        <p className='lg:text-6xl text-xl text-center tracking-widest font-allrounder'>SHOWS</p>
+        <hr className='border-1 w-full border-black ml-6' />
       </div>
       <div className="text-center font-waukegan tracking-widest">
         {shows.map(({ venueName, url, address, pastShow, date, sys: { id }}) => (

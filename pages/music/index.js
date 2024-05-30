@@ -72,8 +72,8 @@ export default function Music({ musicCollection: { data: { musicCollection: { it
           url={url}
         />
       ))}
-      <hr className="border-1 border-white mb-4 lg:my-24 invisible lg:visible" />
-      <div className="flex flex-wrap justify-center lg:justify-between">
+      <hr className="border-1 border-black mb-4 lg:my-24 invisible lg:visible" />
+      <div className="flex flex-wrap gap-16 h-full w-full justify-center lg:justify-between">
         {musics.map(({ trackType, title, link, coverArt: { url, title: artTitle }} ) => (
           <MusicCard
             key={title}

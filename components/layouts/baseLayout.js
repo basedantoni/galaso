@@ -47,14 +47,14 @@ export default function BaseLayout({ children }) {
           </Link>
         </div>
         <Link href="/tour">
-          <a className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-bold">TOUR</a>
+          <a className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-semibold font-allrounder">TOUR</a>
         </Link>
         <Link href="/music">
-          <a className="top-2 right-1 p-4 sm:top-5 sm:right-4 sm:p-7 fixed font-bold">MUSIC</a>
+          <a className="top-2 right-1 p-4 sm:top-5 sm:right-4 sm:p-7 fixed font-semibold font-allrounder">MUSIC</a>
         </Link>
-        <a className="bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-bold" href="https://www.instagram.com/galaso__/" target="_blank" rel="noreferrer">IG</a>
+        <a className="bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://www.instagram.com/galaso__/" target="_blank" rel="noreferrer">IG</a>
         <Link href="/merch">
-          <a className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-bold">MERCH</a>
+          <a className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder">MERCH</a>
         </Link>
         <div className="px-20 sm:px-32 py-16 sm:py-24">
           {children}

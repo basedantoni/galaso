@@ -6,12 +6,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      allrounder: ['Allrounder', 'serif'],
       waukegan: ['Waukegan', 'sans-serif'],
       mango: ['Black Mango', 'serif'],
     },
 
     extend: {
       backgroundImage: {
+        'landing-background': "url('../public/landing-background.webp')",
         'galaso-background': "url('../public/galaso-background.webp')",
         'black-background': "url('../public/black.webp')",
         'rainbow-background': "url('../public/rainbow.webp')",

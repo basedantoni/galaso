@@ -2,9 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color: #2f2f2f;
+  --background: #F9F3EF;
+}
+
+body {
+  color: var(--color);
+  background: var(--background);
+  font-family: var(--font-sans),monospace;
+  font-size: 16px;
+  line-height: 16px!important;
+  letter-spacing: -.4px;
+}
+
 @layer base {
-  body {
-    font-family: 'Roboto Mono', monospace;
+  /* Allrounder Font */
+  @font-face {
+    font-family: Allrounder;
+    font-weight: 400;
+    src: url('/fonts/Allrounder-Book.otf');
+  }
+  @font-face {
+    font-family: Allrounder;
+    font-weight: 500;
+    src: url('/fonts/Allrounder-Regular.otf');
+  }
+  @font-face {
+    font-family: Allrounder;
+    font-weight: 600;
+    src: url('/fonts/allrounder-Medium.otf');
   }
 
   /* Waukegan Font */
