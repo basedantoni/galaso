@@ -11,11 +11,11 @@ export default function Home() {
         </Head>   
 
         <main className='relative flex justify-center items-center h-screen'>
-          <h1 className='absolute mix-blend-hard-light top-1/4 right-16 sm:left-[20%] flex flex-col items-end sm:items-start font-waukegan font-bold text-2xl sm:text-5xl'>
-            <span className='sm:mr-24 sm:leading-[80%]'>click to</span>
-            <span className='sm:text-[8rem] sm:leading-[80%]'>listen to</span>
-            <span className='text-4xl sm:text-[8.75rem] sm:leading-[80%]'>single</span>
-            <span className='text-4xl sm:text-[8.75rem] sm:leading-[80%]'>title</span>
+          <h1 className='cursor-pointer absolute tracking-tighter text-white top-[15%] right-16 sm:left-[15%] flex flex-col items-end sm:items-start font-allrounder font-bold text-2xl sm:text-5xl'>
+            <span className='sm:mr-24 sm:leading-[90%]'>click to</span>
+            <span className='sm:text-[8rem] sm:leading-[90%]'>listen t<span className='mix-blend-difference'>o</span></span>
+            <span className='text-4xl sm:text-[8.75rem] sm:leading-[90%]'>single</span>
+            <span className='text-4xl sm:text-[8.75rem] sm:leading-[90%]'>title</span>
           </h1>
         </main>
       </div>

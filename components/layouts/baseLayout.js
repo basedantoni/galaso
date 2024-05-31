@@ -25,19 +25,19 @@ export default function BaseLayout({ children }) {
         <div className='sm:h-24 sm:w-24 h-24 w-24 mx-auto'>
           <Link href="/">
             <motion.div
-              className="cursor-pointer"
-              animate={{ y: [0, 5, 0] }}
+              className="cursor-pointer mt-4"
+              animate={{ y: [0, 16, 0] }}
               transition={{
-                duration: 2,
+                duration: 7,
                 ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
+                times: [0, 1],
                 repeat: Infinity,
               }}
             >
               <Image
                 priority
-                src="/falling.webp"
-                alt="sun"
+                src="/sludge.png"
+                alt="sludge"
                 width={500}
                 height={500}
                 layout="responsive"
@@ -46,15 +46,15 @@ export default function BaseLayout({ children }) {
             </motion.div>
           </Link>
         </div>
-        <Link href="/tour">
-          <a className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-semibold font-allrounder">TOUR</a>
+        <Link className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-semibold font-allrounder" href="/tour">
+          TOUR
         </Link>
-        <Link href="/music">
-          <a className="top-2 right-1 p-4 sm:top-5 sm:right-4 sm:p-7 fixed font-semibold font-allrounder">MUSIC</a>
+        <Link className="top-2 right-1 p-4 sm:top-5 sm:right-4 sm:p-7 fixed font-semibold font-allrounder" href="/music">
+          MUSIC
         </Link>
         <a className="bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://www.instagram.com/galaso__/" target="_blank" rel="noreferrer">IG</a>
-        <Link href="/merch">
-          <a className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder">MERCH</a>
+        <Link className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="/merch">
+          MERCH
         </Link>
         <div className="px-20 sm:px-32 py-16 sm:py-24">
           {children}
