@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Suspense, useEffect } from 'react';
 import dynamic from "next/dynamic";
-import * as animationData from "../../lib/lottie/ferro.json"
+import * as animationData from "../../lib/lottie/data.json"
 import FerroFallback from "../FerroFallback";
 
 export default function BaseLayout({ children }) {
