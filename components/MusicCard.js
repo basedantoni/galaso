@@ -6,7 +6,7 @@ import { useMediaQuery } from '../hooks/useMediaQuery'
 const MusicCard = ({ trackType, trackName, listenLink, alternativeText, url }) => {
   return (
     <>
-      <motion.div className="w-1/4">
+      <motion.div className="w-full sm:w-1/4">
         <div>
           <Image
             src={url}
