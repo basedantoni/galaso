@@ -1,23 +1,6 @@
 import Link from "next/link"
-import { useEffect } from 'react';
-import useWindowDimensions from '../../hooks/useWindowDimension';
 
 export default function BlackLayout({ children }) {
-  function onDocumentMouseDown() {
-    // Add redirect to shopify store
-    const canvasDomElement = document.getElementById('myThreeJsCanvas');
-
-    if (canvasDomElement) {
-      document.body.removeChild(canvasDomElement);
-    }
-  }
-
-  useEffect(() => {
-    onDocumentMouseDown();
-  }, [])
-
-  const { height, width } = useWindowDimensions();
-
   return (
     <>
       <main className={`h-screen w-full`}>
@@ -28,9 +11,9 @@ export default function BlackLayout({ children }) {
           MUSIC
         </Link>
         <a className="bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-bold" href="https://www.instagram.com/galaso__/" target="_blank" rel="noreferrer">IG</a>
-        <Link href="/merch" className="bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-bold">
+        <a className="z-10 bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://galasostore.myshopify.com/" target="_blank" rel="noreferrer">
           MERCH
-        </Link>
+        </a>
         <div className="px-24 sm:px-32 py-16 sm:py-24 w-full h-full flex justify-center items-center">
           {children}
         </div>
