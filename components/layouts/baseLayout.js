@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 import { Suspense } from 'react';
 import dynamic from "next/dynamic";
 import * as animationData from "../../lib/lottie/data.json"
@@ -10,11 +11,21 @@ export default function BaseLayout({ children }) {
   return (
     <>
       <main>
-        <Link className='flex w-full justify-center' href="/">
+        <div className='sm:h-40 sm:w-40 h-24 w-24 mx-auto mt-10 mb-24'>
+          <Link href="/">
+            <Image
+              src="/funky_bunch.png"
+              alt="funky bunch"
+              width={256}
+              height={256}
+            />
+          </Link>
+        </div>
+        {/* <Link className='flex w-full justify-center' href="/">
           <Suspense fallback={FerroFallback}>
             <DynamicLottie className="h-64 w-64 -translate-y-12" animationData={animationData} />
           </Suspense>
-        </Link>
+        </Link> */}
         <Link className="top-2 left-1 p-4 sm:top-5 sm:left-4 sm:p-7 fixed font-semibold font-allrounder" href="/tour">
           TOUR
         </Link>
