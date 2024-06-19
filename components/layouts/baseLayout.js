@@ -11,13 +11,13 @@ export default function BaseLayout({ children }) {
   return (
     <>
       <main>
-        <div className='sm:h-40 sm:w-40 h-24 w-24 mx-auto mt-10 mb-24'>
+        <div className='sm:h-72 sm:w-72 h-24 w-24 mx-auto'>
           <Link href="/">
             <Image
               src="/funky_bunch.png"
               alt="funky bunch"
-              width={256}
-              height={256}
+              width={512}
+              height={512}
             />
           </Link>
         </div>
