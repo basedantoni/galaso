@@ -98,3 +98,10 @@ body {
     src: url('/fonts/BlackMango/BlackMango-Black.ttf');
   }
 }
+
+.transparent-gradient {
+  background: 
+    /* linear-gradient(180deg, #F9F3EF 0%, rgba(249, 243, 239, 0.00) 49.69%, #F9F3EF 100%), 
+    linear-gradient(270deg, #F9F3EF 0%, rgba(249, 243, 239, 0.00) 49.69%, #F9F3EF 100%); */
+    radial-gradient(circle, rgba(249, 243, 239, 0.00) 75%, #F9F3EF 100%);
+}

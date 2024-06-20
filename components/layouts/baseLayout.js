@@ -3,12 +3,14 @@ import { Suspense } from 'react';
 import dynamic from "next/dynamic";
 import * as animationData from "../../lib/lottie/data.json"
 import FerroFallback from "../FerroFallback";
+import DotPattern from "../DotPattern";
 
 export default function BaseLayout({ children }) {
   const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
 
   return (
     <>
+      <DotPattern />
       <main>
         <Link className='flex w-full justify-center' href="/">
           <Suspense fallback={FerroFallback}>
