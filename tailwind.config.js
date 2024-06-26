@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         'landing-background': "url('../public/landing-background.webp')",
         'landing-background-out': "url('../public/bg-desktop.png')",
+        'landing-background-dark': "url('../public/bg-dark.png')",
         'landing-background-alt': "url('../public/bg.png')",
         'galaso-background': "url('../public/galaso-background.webp')",
         'black-background': "url('../public/black.webp')",
