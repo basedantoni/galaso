@@ -3,7 +3,7 @@ import HomeLayout from '../components/layouts/homeLayout'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
 export default function Home() {
-  const isSmall = useMediaQuery('(min-width: 640px)');
+  const isDesktop = useMediaQuery('(min-width: 640px)');
 
   return (
     <HomeLayout>
@@ -14,12 +14,12 @@ export default function Home() {
         </Head>   
 
         <main className='relative flex justify-center items-center h-screen'>
-          {isSmall ? <a href="https://too.fm/n2n8ne2" target="_blank" rel="noreferrer">
-            <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer absolute tracking-tighter text-white top-1/3 right-16 sm:left-[15%] flex flex-col items-end sm:items-start font-allrounder font-bold text-2xl sm:text-2xl'>
-              <span className='font-allrounder sm:mr-24 sm:leading-[90%]'>click to</span>
-              <span className='font-allrounder sm:text-5xl sm:leading-[90%]'>listen to</span>
-              <span className='font-allrounder text-4xl sm:text-7xl sm:leading-[90%]'>Talk</span>
-              <span className='font-allrounder text-4xl sm:text-7xl sm:leading-[90%]'>Too Much</span>
+          {isDesktop ? <a href="https://too.fm/n2n8ne2" target="_blank" rel="noreferrer">
+            <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer absolute tracking-tighter text-white top-1/3 right-16 sm:left-[10%] flex flex-col items-end sm:items-start font-allrounder font-bold text-2xl sm:text-2xl w-fit'>
+              <span className='w-full text-right font-allrounder sm:mr-24 sm:leading-[110%]'>click to</span>
+              <span className='w-full text-right font-allrounder sm:mr-24 sm:leading-[110%]'>listen to</span>
+              <span className='w-full text-right font-allrounder text-4xl sm:text-7xl sm:leading-[90%] tracking-tighter'>Talk</span>
+              <span className='w-full text-right font-allrounder text-4xl sm:text-7xl sm:leading-[90%] tracking-tighter'>Too Much</span>
             </span>
           </a> 
           : <a className='absolute w-3/4 top-12 flex justify-center text-center' href="https://too.fm/n2n8ne2" target="_blank" rel="noreferrer">
