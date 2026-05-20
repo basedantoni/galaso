@@ -13,7 +13,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'landing-background': "url('../public/landing-background-004.png')",
+        'landing-background': "url('../public/IMG_0057.JPG')",
         'landing-background-out': "url('../public/bg-desktop.png')",
         'landing-background-dark': "url('../public/bg-dark.png')",
         'landing-background-alt': "url('../public/bg.png')",
