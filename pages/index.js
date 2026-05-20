@@ -14,19 +14,12 @@ export default function Home() {
         </Head>   
 
         <main className='relative flex justify-center items-center h-screen'>
-          {isDesktop ? <a href="https://too.fm/n2n8ne2" target="_blank" rel="noreferrer">
-            <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer absolute tracking-tighter text-white top-1/3 right-16 sm:left-[10%] flex flex-col items-end sm:items-start font-allrounder font-bold text-2xl sm:text-2xl w-fit'>
-              <span className='w-full text-right font-allrounder sm:mr-24 sm:leading-[110%]'>click to</span>
-              <span className='w-full text-right font-allrounder sm:mr-24 sm:leading-[110%]'>listen to</span>
-              <span className='w-full text-right font-allrounder text-4xl sm:text-7xl sm:leading-[90%] tracking-tighter'>Talk</span>
-              <span className='w-full text-right font-allrounder text-4xl sm:text-7xl sm:leading-[90%] tracking-tighter'>Too Much</span>
+          <a href="https://beacons.ai/galaso_" target="_blank" rel="noreferrer">
+            <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer text-white font-allrounder font-bold text-2xl text-center flex flex-col items-center gap-1'>
+              <span>A Brief Inquiry On Love.</span>
+              <span className='text-xs font-normal'>click for more</span>
             </span>
-          </a> 
-          : <a className='absolute w-3/4 top-12 flex justify-center text-center' href="https://too.fm/n2n8ne2" target="_blank" rel="noreferrer">
-            <p className='w-full [text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer absolute tracking-tighter text-white flex flex-col items-end sm:items-start font-allrounder font-bold text-2xl sm:text-2xl'>
-              <span className='w-full text-sm'>Click to</span> listen to talk too Much
-            </p>  
-          </a>}
+          </a>
         </main>
       </div>
     </HomeLayout>
