@@ -11,8 +11,8 @@ export default function HomeLayout({ children }) {
           <Link className="[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] z-10 top-2 right-1 p-4 sm:top-5 sm:right-4 sm:p-7 fixed font-semibold font-allrounder" href="/music">
             MUSIC
           </Link>
-          <a className="[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] z-10 bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://www.instagram.com/galaso__/" target="_blank" rel="noreferrer">IG</a>
-          <a className="[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] z-10 bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://galasostore.myshopify.com/" target="_blank" rel="noreferrer">
+          <a className="[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] z-10 bottom-2 left-1 sm:bottom-5 sm:left-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://www.instagram.com/galasomusic" target="_blank" rel="noreferrer">IG</a>
+          <a className="[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] z-10 bottom-2 right-1 sm:bottom-5 sm:right-4 p-4 sm:p-7 fixed font-semibold font-allrounder" href="https://abriefinquiryonlove.myshopify.com/" target="_blank" rel="noreferrer">
             MERCH
           </a>
         </div>

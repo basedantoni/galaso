@@ -14,7 +14,7 @@ export default function Home() {
         </Head>   
 
         <main className='relative flex justify-center items-center h-screen'>
-          <a href="https://beacons.ai/galaso_" target="_blank" rel="noreferrer">
+          <a href="https://ffm.to/a-brief-inquiry-on-love" target="_blank" rel="noreferrer">
             <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer text-white font-allrounder font-bold text-2xl text-center flex flex-col items-center gap-1'>
               <span>A Brief Inquiry On Love.</span>
               <span className='text-xs font-normal'>click for more</span>
