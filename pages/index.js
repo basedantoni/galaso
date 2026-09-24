@@ -17,7 +17,7 @@ export default function Home() {
           <a href="https://ffm.to/a-brief-inquiry-on-love" target="_blank" rel="noreferrer">
             <span className='[text-shadow:_0_-4px_16px_rgb(0_0_0_/_100%)] cursor-pointer text-white font-allrounder font-bold text-2xl text-center flex flex-col items-center gap-1'>
               <span>A Brief Inquiry On Love.</span>
-              <span className='text-xs font-normal'>click for more</span>
+              <span className='text-xs font-normal'>LISTEN NOW</span>
             </span>
           </a>
         </main>
